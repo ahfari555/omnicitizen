@@ -7,6 +7,36 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://omnicitizen.vercel.app/blog-how-to-study-civics.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://omnicitizen.vercel.app/blog-naturalization-interview-tips.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://omnicitizen.vercel.app/blog-us-history-essentials.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://omnicitizen.vercel.app/blog-rights-and-responsibilities.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://omnicitizen.vercel.app/blog-document-checklist.html</loc>
+    <lastmod>2026-10-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://omnicitizen.vercel.app/privacy.html</loc>
     <lastmod>2026-10-01</lastmod>
     <changefreq>monthly</changefreq>

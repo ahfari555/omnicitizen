@@ -1,348 +1,184 @@
-<!DOCTYPE html>
-<html lang="en" class="light">
+<!doctype html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- SEO Meta Tags -->
-  <title>OmniCitizen - Free US Citizenship & Civics Practice Test (Official 100 USCIS Questions)</title>
-  <meta name="description" content="Master the official USCIS Civics Test with 100 official questions, randomized 10-question mock exams, audio pronunciation, and comprehensive study guides.">
-  <meta name="keywords" content="us citizenship test, uscis civics test, naturalization exam practice, 100 official uscis questions, us history and government">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OmniCitizen | US Naturalization Civics Test Study &amp; Practice</title>
+  <meta name="description" content="Understand the 2008 and 2025 USCIS naturalization civics test formats, study official resources, and practice civics questions with explanations.">
   <meta name="author" content="OmniCitizen Editorial Team">
-  <meta name="robots" content="index, follow">
-  <meta name="geo.region" content="US">
-
-  <!-- Google Search Console & AdSense -->
-  <meta name="google-site-verification" content="google45274bc7d9133ca5" />
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2805918301542012" crossorigin="anonymous"></script>
-
-  <!-- Favicon SVG -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🇺🇸</text></svg>">
-
-  <!-- Google Font: Plus Jakarta Sans -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- Tailwind CSS -->
+  <meta name="robots" content="index,follow">
+  <meta name="google-site-verification" content="google45274bc7d9133ca5">
+  <link rel="canonical" href="https://omnicitizen.vercel.app/">
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      darkMode: 'class',
-      theme: {
-        extend: {
-          fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] },
-        }
-      }
-    }
-  </script>
-
   <style>
-    body {
-      background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 50%, #bbf7d0 100%);
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-    html.dark body {
-      background: linear-gradient(135deg, #0f172a 0%, #064e3b 50%, #022c22 100%);
-      color: #f8fafc;
-    }
-    .pastel-card {
-      background: rgba(255, 255, 255, 0.88);
-      backdrop-filter: blur(16px);
-      border: 1px solid rgba(187, 247, 208, 0.9);
-      box-shadow: 0 10px 40px -12px rgba(22, 101, 52, 0.15);
-      transition: all 0.3s ease;
-    }
-    html.dark .pastel-card {
-      background: rgba(30, 41, 59, 0.8);
-      border: 1px solid rgba(255, 255, 255, 0.05);
-      box-shadow: 0 10px 40px -12px rgba(0, 0, 0, 0.5);
-    }
-    .gradient-text {
-      background: linear-gradient(135deg, #15803d 0%, #16a34a 50%, #22c55e 100%);
-      -webkit-background-clip: text;
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+    :root { color-scheme: light; }
+    body { background: linear-gradient(135deg,#f0fdf4,#dcfce7 55%,#bbf7d0); font-family: Arial,sans-serif; }
+    .card { background: rgba(255,255,255,.94); border:1px solid #bbf7d0; border-radius:22px; box-shadow:0 12px 35px rgba(20,83,45,.07); }
+    .prose p { line-height:1.85; margin:0 0 1rem; color:#334155; }
+    .prose h2 { font-size:1.45rem; font-weight:800; color:#166534; margin:2rem 0 .7rem; }
+    .prose h3 { font-size:1.1rem; font-weight:700; margin:1.25rem 0 .5rem; }
+    .prose ul { list-style:disc; padding-left:1.5rem; margin:.5rem 0 1.2rem; }
+    .prose li { margin:.4rem 0; line-height:1.7; }
+    .prose a,a.link { color:#047857; text-decoration:underline; font-weight:600; }
+    .pill { display:inline-block; border-radius:99px; background:#dcfce7; color:#166534; padding:.3rem .7rem; font-size:.75rem; font-weight:700; }
+    .btn { display:inline-block; background:#059669; color:white; border-radius:12px; padding:.75rem 1rem; font-weight:700; }
+    .btn:hover { background:#047857; }
+    .muted { color:#64748b; font-size:.9rem; }
+    button:focus-visible,a:focus-visible { outline:3px solid #0f766e; outline-offset:3px; }
+    .hero-visual { min-width:0; }
+    .hero-visual img { display:block; width:100%; height:auto; max-height:520px; object-fit:cover; object-position:center; border-radius:28px; box-shadow:0 22px 55px rgba(15,118,110,.16); }
+    @media (max-width: 1023px) { .hero-visual { max-width:720px; margin:0 auto; } }
+    @media (max-width: 640px) { .hero-visual img { border-radius:20px; } }
   </style>
 </head>
-<body class="font-sans min-h-screen flex flex-col antialiased text-slate-800 dark:text-slate-100">
-
-  <!-- TOP NAVBAR -->
-  <header class="sticky top-0 z-50 bg-white/70 dark:bg-slate-900/80 backdrop-blur-md border-b border-emerald-100 dark:border-slate-800 px-6 py-4">
-    <div class="max-w-7xl mx-auto flex items-center justify-between">
-      <a href="index.html" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-emerald-600 via-green-600 to-teal-600 flex items-center justify-center font-black text-xl text-white shadow-md shadow-emerald-200 dark:shadow-none transition-transform group-hover:scale-105">
-          🇺🇸
-        </div>
-        <span class="text-xl font-extrabold tracking-tight text-slate-800 dark:text-white">Omni<span class="gradient-text">Citizen</span></span>
-      </a>
-
-      <div class="flex items-center gap-3">
-        <a href="#study-guides" class="hidden sm:inline-flex text-xs font-bold text-emerald-700 dark:text-emerald-300 hover:underline">📚 Study Guides</a>
-        <span class="hidden md:inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-semibold bg-emerald-50 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-800 shadow-sm">
-          <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span> 100 Official USCIS Questions
-        </span>
-        <button onclick="toggleDarkMode()" class="p-2.5 rounded-2xl bg-white/50 dark:bg-slate-800 text-slate-600 dark:text-amber-400 hover:bg-white dark:hover:bg-slate-700 transition shadow-inner">
-          <span id="themeIcon">🌙</span>
-        </button>
-      </div>
+<body class="text-slate-800">
+  <header class="bg-white/85 border-b border-emerald-100">
+    <div class="max-w-6xl mx-auto px-5 py-4 flex flex-wrap gap-4 justify-between items-center">
+      <a class="font-black text-xl text-slate-900" href="index.html" aria-label="OmniCitizen home">🇺🇸 Omni<span class="text-emerald-600">Citizen</span></a>
+      <nav class="flex flex-wrap gap-4 text-sm font-semibold" aria-label="Main navigation">
+        <a href="#test-version">Test versions</a><a href="#practice">Practice</a><a href="#guides">Guides</a><a href="about.html">About</a>
+      </nav>
     </div>
   </header>
 
-  <!-- MAIN APP CONTAINER -->
-  <main class="max-w-4xl mx-auto px-6 py-10 flex-1 w-full space-y-12">
-    
-    <div class="text-center space-y-3">
-      <span class="text-xs font-bold uppercase tracking-widest text-emerald-700 dark:text-emerald-300 bg-emerald-100/50 dark:bg-emerald-950 px-4 py-1.5 rounded-full border border-emerald-200 dark:border-emerald-800 inline-block shadow-sm">USCIS Naturalization Civics Exam</span>
-      <h1 class="text-3xl md:text-5xl font-black tracking-tight text-slate-900 dark:text-white">
-        Pass Your US Citizenship Test <span class="gradient-text">with Confidence.</span>
-      </h1>
-      <p class="text-slate-600 dark:text-slate-400 text-sm md:text-base max-w-xl mx-auto font-medium">
-        Take randomized 10-question mock exams drawn from the official 100 USCIS questions. Passing requires at least 6 correct answers.
-      </p>
-    </div>
-
-    <!-- SIMULATOR CARD -->
-    <div class="pastel-card p-8 md:p-10 rounded-3xl space-y-6">
-      <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-emerald-100 dark:border-slate-700 pb-4 gap-3">
-        <div>
-          <h2 class="font-extrabold text-base text-slate-900 dark:text-white">USCIS Civics Mock Exam</h2>
-          <p class="text-xs text-slate-500">Audio pronunciation & instant score feedback</p>
-        </div>
-        <div class="flex items-center gap-2">
-          <button onclick="speakQuestion()" class="flex items-center gap-1 text-xs font-bold bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 px-3 py-1.5 rounded-full hover:bg-emerald-200 transition">
-            🔊 Listen Audio
-          </button>
-          <span id="qCount" class="text-xs font-bold bg-slate-100 dark:bg-slate-800 px-3 py-1.5 rounded-full">Ready</span>
+  <main class="max-w-5xl mx-auto px-5 py-10 space-y-10">
+    <section class="hero-section grid lg:grid-cols-2 items-center gap-8 lg:gap-10 py-8 lg:py-12">
+      <div class="hero-copy text-center lg:text-left">
+        <span class="pill">Naturalization Civics Study Center</span>
+        <h1 class="text-4xl md:text-5xl font-black text-slate-900 mt-4 leading-tight">Prepare for Your <span class="text-emerald-700">U.S. Citizenship</span> Civics Test</h1>
+        <p class="max-w-3xl mx-auto lg:mx-0 text-slate-600 mt-4 leading-7">Clear study guidance for the USCIS 2008 and 2025 civics tests. Identify the test version that applies to your Form N-400 filing date, review official study materials, and strengthen your understanding with practice.</p>
+        <div class="mt-6 flex flex-wrap gap-3 justify-center lg:justify-start">
+          <a class="btn" href="#test-version">Choose your test version</a>
+          <a class="rounded-xl border border-emerald-300 px-4 py-3 font-bold" href="#practice">Try practice questions</a>
         </div>
       </div>
-
-      <!-- START SCREEN -->
-      <div id="startScreen" class="text-center py-10 space-y-5">
-        <div class="text-5xl">🗽</div>
-        <h3 class="text-xl font-extrabold text-slate-900 dark:text-white">Start 10-Question Random Mock Exam</h3>
-        <p class="text-xs text-slate-500 max-w-md mx-auto">Tested on US government, history, and integrated geography from the official USCIS bank. Aim for 6/10 to pass!</p>
-        <button onclick="startExam()" class="bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold px-8 py-3.5 rounded-2xl text-xs transition shadow-lg shadow-emerald-500/30">Start Mock Exam</button>
-      </div>
-
-      <!-- ACTIVE EXAM BOX -->
-      <div id="quizBox" class="hidden space-y-6">
-        <h3 id="qText" class="font-bold text-lg text-slate-800 dark:text-slate-100"></h3>
-        <div id="optsBox" class="space-y-3"></div>
-      </div>
-
-      <!-- EXPLANATION / FEEDBACK -->
-      <div id="explanationBox" class="hidden p-5 rounded-2xl bg-emerald-50/70 dark:bg-slate-900/80 border border-emerald-200 dark:border-emerald-900 space-y-2">
-        <div class="flex items-center gap-2 font-bold text-xs text-emerald-700 dark:text-emerald-300">
-          <span>🇺🇸</span> Official USCIS Answer Explanation:
-        </div>
-        <p id="explanationText" class="text-xs md:text-sm text-slate-600 dark:text-slate-300 leading-relaxed"></p>
-        <button onclick="nextQuestion()" class="mt-3 bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold px-6 py-2.5 rounded-xl text-xs transition">Next Question →</button>
-      </div>
-
-      <!-- RESULT SCREEN -->
-      <div id="resBox" class="hidden text-center space-y-6 py-6">
-        <div id="resultEmoji" class="text-5xl">🎉</div>
-        <h3 id="resultTitle" class="text-2xl font-black text-slate-900 dark:text-white">Exam Completed!</h3>
-        <p id="scoreText" class="text-slate-600 dark:text-slate-300 font-medium text-sm"></p>
-        <button onclick="startExam()" class="bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold px-8 py-3.5 rounded-2xl text-xs transition shadow-lg shadow-emerald-500/30">Retake Mock Exam</button>
-      </div>
-    </div>
-
-    <!-- KNOWLEDGE HUB / STUDY GUIDES SECTION (KELIMA ARTIKEL) -->
-    <section id="study-guides" class="pt-8 border-t border-emerald-100 dark:border-slate-800 space-y-6">
-      <div class="text-center space-y-2">
-        <span class="text-xs font-bold uppercase tracking-wider text-emerald-700 dark:text-emerald-300">Expert Resources</span>
-        <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 dark:text-white">US Citizenship Study Guides</h2>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Artikel 1 -->
-        <div class="pastel-card p-6 rounded-3xl flex flex-col justify-between space-y-4 hover:scale-[1.02] transition cursor-pointer border border-emerald-200/50 group" onclick="window.location.href='blog-how-to-study-civics.html'">
-          <div>
-            <span class="px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300">Masterclass</span>
-            <h3 class="text-base font-extrabold text-slate-900 dark:text-white mt-2 group-hover:text-emerald-600 transition">How to Master the 100 Official USCIS Civics Questions</h3>
-            <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 line-clamp-2 leading-relaxed">Discover proven memorization techniques and audio practice strategies for your citizenship test.</p>
-          </div>
-          <div class="pt-4 border-t border-emerald-100 dark:border-slate-700 flex justify-between items-center text-xs font-extrabold text-emerald-700 dark:text-emerald-300">
-            <span>Read Article →</span>
-            <span>5 min read</span>
-          </div>
-        </div>
-
-        <!-- Artikel 2 -->
-        <div class="pastel-card p-6 rounded-3xl flex flex-col justify-between space-y-4 hover:scale-[1.02] transition cursor-pointer border border-emerald-200/50 group" onclick="window.location.href='blog-naturalization-interview-tips.html'">
-          <div>
-            <span class="px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-green-100 text-green-700 dark:bg-green-950 dark:text-green-300">Interview Tips</span>
-            <h3 class="text-base font-extrabold text-slate-900 dark:text-white mt-2 group-hover:text-green-600 transition">What to Expect During Your USCIS Naturalization Interview</h3>
-            <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 line-clamp-2 leading-relaxed">Learn step-by-step guidance on Form N-400 review, English tests, and civics expectations.</p>
-          </div>
-          <div class="pt-4 border-t border-emerald-100 dark:border-slate-700 flex justify-between items-center text-xs font-extrabold text-green-700 dark:text-green-300">
-            <span>Read Article →</span>
-            <span>6 min read</span>
-          </div>
-        </div>
-
-        <!-- Artikel 3 -->
-        <div class="pastel-card p-6 rounded-3xl flex flex-col justify-between space-y-4 hover:scale-[1.02] transition cursor-pointer border border-emerald-200/50 group" onclick="window.location.href='blog-us-history-essentials.html'">
-          <div>
-            <span class="px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-teal-100 text-teal-700 dark:bg-teal-950 dark:text-teal-300">History Guide</span>
-            <h3 class="text-base font-extrabold text-slate-900 dark:text-white mt-2 group-hover:text-teal-600 transition">Essential US History & Government Concepts Every Immigrant Should Know</h3>
-            <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 line-clamp-2 leading-relaxed">Explore key historical milestones, the Constitution, and separation of powers.</p>
-          </div>
-          <div class="pt-4 border-t border-emerald-100 dark:border-slate-700 flex justify-between items-center text-xs font-extrabold text-teal-700 dark:text-teal-300">
-            <span>Read Article →</span>
-            <span>5 min read</span>
-          </div>
-        </div>
-
-        <!-- Artikel 4 -->
-        <div class="pastel-card p-6 rounded-3xl flex flex-col justify-between space-y-4 hover:scale-[1.02] transition cursor-pointer border border-emerald-200/50 group" onclick="window.location.href='blog-rights-and-responsibilities.html'">
-          <div>
-            <span class="px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300">Civic Education</span>
-            <h3 class="text-base font-extrabold text-slate-900 dark:text-white mt-2 group-hover:text-emerald-600 transition">Rights and Responsibilities of US Citizens: What You Need to Know</h3>
-            <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 line-clamp-2 leading-relaxed">Explore fundamental constitutional rights, voting privileges, and civic duties.</p>
-          </div>
-          <div class="pt-4 border-t border-emerald-100 dark:border-slate-700 flex justify-between items-center text-xs font-extrabold text-emerald-700 dark:text-emerald-300">
-            <span>Read Article →</span>
-            <span>5 min read</span>
-          </div>
-        </div>
-
-        <!-- Artikel 5 -->
-        <div class="pastel-card p-6 rounded-3xl flex flex-col justify-between space-y-4 hover:scale-[1.02] transition cursor-pointer border border-emerald-200/50 group" onclick="window.location.href='blog-document-checklist.html'">
-          <div>
-            <span class="px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-green-100 text-green-700 dark:bg-green-950 dark:text-green-300">Checklist</span>
-            <h3 class="text-base font-extrabold text-slate-900 dark:text-white mt-2 group-hover:text-green-600 transition">Complete USCIS Interview Document Checklist: What to Bring on Exam Day</h3>
-            <p class="text-xs text-slate-600 dark:text-slate-400 mt-2 line-clamp-2 leading-relaxed">Ensure you bring all required paperwork including green cards, tax transcripts, and IDs.</p>
-          </div>
-          <div class="pt-4 border-t border-emerald-100 dark:border-slate-700 flex justify-between items-center text-xs font-extrabold text-green-700 dark:text-green-300">
-            <span>Read Article →</span>
-            <span>5 min read</span>
-          </div>
-        </div>
+      <div class="hero-visual" aria-label="Statue of Liberty and New York skyline">
+        <img src="statue-of-liberty-hero.webp" alt="Statue of Liberty with the American flag and New York City skyline" width="884" height="650" fetchpriority="high">
       </div>
     </section>
 
+    <section id="test-version" class="grid md:grid-cols-2 gap-5" aria-label="USCIS civics test versions">
+      <article class="card p-6">
+        <span class="pill">2008 Civics Test</span>
+        <h2 class="text-2xl font-extrabold mt-3">100-question bank</h2>
+        <p class="text-slate-600 mt-2">Generally applies if you filed Form N-400 <strong>before October 20, 2025</strong>.</p>
+        <ul class="list-disc pl-5 mt-4 text-slate-700 space-y-2"><li>Up to 10 questions asked orally</li><li>At least 6 correct answers to pass</li><li>Special 65/20 consideration may apply</li></ul>
+        <a class="inline-block mt-4 font-bold link" href="https://www.uscis.gov/sites/default/files/document/questions-and-answers/OoC_100_Questions_2008_Civics_Test_Large_V1.pdf" target="_blank" rel="noopener noreferrer">Official USCIS 2008 question list ↗</a>
+      </article>
+      <article class="card p-6">
+        <span class="pill">2025 Civics Test</span>
+        <h2 class="text-2xl font-extrabold mt-3">128-question bank</h2>
+        <p class="text-slate-600 mt-2">Generally applies if you filed Form N-400 <strong>on or after October 20, 2025</strong>.</p>
+        <ul class="list-disc pl-5 mt-4 text-slate-700 space-y-2"><li>Up to 20 questions asked orally</li><li>At least 12 correct answers to pass</li><li>Test stops after 12 correct or 9 incorrect</li></ul>
+        <a class="inline-block mt-4 font-bold link" href="https://www.uscis.gov/sites/default/files/document/questions-and-answers/2025-Civics-Test-128-Questions-and-Answers.pdf" target="_blank" rel="noopener noreferrer">Official USCIS 2025 question list ↗</a>
+      </article>
+    </section>
+
+    <section class="card p-6 md:p-8">
+      <h2 class="text-2xl font-black">Which test should I study?</h2>
+      <p class="text-slate-600 mt-2">USCIS determines the test version by the date you filed Form N-400, not by the date you visit this website. Check your filing confirmation and compare it with the dates above. Some applicants may qualify for exceptions or special consideration; verify your situation directly with USCIS.</p>
+      <p class="mt-3"><a class="link" href="https://www.uscis.gov/citizenship/find-study-materials-and-resources/study-for-the-test" target="_blank" rel="noopener noreferrer">Read USCIS: Study for the Test ↗</a></p>
+    </section>
+
+    <section id="practice" class="card p-6 md:p-8">
+      <div class="flex flex-wrap justify-between gap-3 items-center"><div><span class="pill">Interactive learning tool</span><h2 class="text-2xl font-black mt-2">Civics Quick Practice</h2></div><span class="text-xs text-slate-500">14-question learning sample</span></div>
+      <p class="text-slate-600 mt-2">This short practice set is for learning and feedback. It is <strong>not</strong> a complete 100- or 128-question USCIS bank and does not reproduce the official oral test.</p>
+      <div id="start" class="text-center py-7"><button type="button" class="btn" onclick="startPractice()">Start 10-question practice</button></div>
+      <div id="quiz" class="hidden space-y-5" aria-live="polite">
+        <div class="flex justify-between text-sm font-bold"><span id="progress"></span><span id="score"></span></div>
+        <div class="h-2 bg-emerald-100 rounded-full" role="progressbar" aria-label="Practice progress"><div id="bar" class="h-2 bg-emerald-600 rounded-full" style="width:0%"></div></div>
+        <h3 id="question" class="text-xl font-bold"></h3>
+        <div id="answers" class="grid gap-2"></div>
+        <div id="feedback" class="hidden bg-emerald-50 p-4 rounded-xl"><p id="explain" class="text-slate-700"></p><button type="button" class="btn mt-3" onclick="nextQuestion()">Next question</button></div>
+      </div>
+      <div id="result" class="hidden text-center py-6"><h3 class="text-2xl font-black">Practice complete</h3><p id="resultText" class="my-3 text-slate-700"></p><p class="muted">This score is a learning indicator only, not an official USCIS result.</p><button type="button" class="btn mt-4" onclick="startPractice()">Practice again</button></div>
+    </section>
+
+    <section id="guides" class="space-y-5">
+      <div><span class="pill">Learning Center</span><h2 class="text-3xl font-black mt-2">Practical Citizenship Guides</h2><p class="text-slate-600 mt-2">Focused articles with actionable checklists, explanations, and official references.</p></div>
+      <div class="grid md:grid-cols-2 gap-4">
+        <a class="card p-5" href="blog-how-to-study-civics.html"><h3 class="font-extrabold text-lg">How to Build a Civics Study Plan</h3><p class="muted mt-2">A repeatable 4-week method for learning, recalling, and reviewing civics questions.</p><span class="inline-block mt-3 font-bold">Read guide →</span></a>
+        <a class="card p-5" href="blog-naturalization-interview-tips.html"><h3 class="font-extrabold text-lg">What Happens at the Naturalization Interview?</h3><p class="muted mt-2">Understand the interview flow, English tests, civics test, and follow-up.</p><span class="inline-block mt-3 font-bold">Read guide →</span></a>
+        <a class="card p-5" href="blog-us-history-essentials.html"><h3 class="font-extrabold text-lg">U.S. Government and History: Core Concepts</h3><p class="muted mt-2">Connect the Constitution, branches of government, and major historical periods.</p><span class="inline-block mt-3 font-bold">Read guide →</span></a>
+        <a class="card p-5" href="blog-rights-and-responsibilities.html"><h3 class="font-extrabold text-lg">Rights and Responsibilities in Civic Life</h3><p class="muted mt-2">Learn how constitutional freedoms and civic participation fit together.</p><span class="inline-block mt-3 font-bold">Read guide →</span></a>
+        <a class="card p-5" href="blog-document-checklist.html"><h3 class="font-extrabold text-lg">Naturalization Interview Preparation Checklist</h3><p class="muted mt-2">Organize notices, identity documents, records, and case-specific evidence.</p><span class="inline-block mt-3 font-bold">Read guide →</span></a>
+      </div>
+    </section>
+
+    <section class="card p-6"><h2 class="text-xl font-black">Important accuracy note</h2><p class="text-slate-600 mt-2">Some civics answers change after elections or appointments. Questions asking for current officeholders, state officials, or local representatives require up-to-date answers. Always check the official USCIS test updates shortly before your interview.</p><a class="link" href="https://www.uscis.gov/citizenship/testupdates" target="_blank" rel="noopener noreferrer">USCIS Civics Test Updates ↗</a></section>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="border-t border-emerald-100 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50 py-8 text-center text-xs text-slate-500 dark:text-slate-400 font-medium mt-12">
-    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-      <p>© 2026 OmniCitizen. All rights reserved.</p>
-      <div class="flex gap-6">
-        <a href="privacy.html" class="hover:text-slate-800 dark:hover:text-white transition">Privacy Policy</a>
-        <a href="terms.html" class="hover:text-slate-800 dark:hover:text-white transition">Terms of Service</a>
-        <a href="contact.html" class="hover:text-slate-800 dark:hover:text-white transition">Contact Us</a>
-      </div>
-    </div>
-  </footer>
+  <footer class="mt-14 border-t border-emerald-100 bg-white/70"><div class="max-w-6xl mx-auto px-5 py-8 text-sm text-slate-500 flex flex-wrap gap-5 justify-between"><span>© 2026 OmniCitizen · Independent educational resource</span><div class="flex gap-4"><a href="about.html">About</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div></div></footer>
 
-  <!-- SCRIPT LOGIC -->
   <script>
-    function toggleDarkMode() {
-      if (document.documentElement.classList.contains('dark')) {
-        document.documentElement.classList.remove('dark');
-        document.documentElement.classList.add('light');
-        document.getElementById('themeIcon').innerText = '🌙';
-      } else {
-        document.documentElement.classList.remove('light');
-        document.documentElement.classList.add('dark');
-        document.getElementById('themeIcon').innerText = '☀';
-      }
-    }
-
-    const officialCivicsQuestions = [
-      { q: "What is the supreme law of the land?", options: ["The Declaration of Independence", "The Constitution", "The Bill of Rights", "The Emancipation Proclamation"], answer: 1, explanation: "The Constitution defines the framework of the US government and is recognized as the supreme law of the land." },
-      { q: "What does the Constitution do?", options: ["Sets up the government", "Defines the government", "Protects basic rights of Americans", "All of the above"], answer: 3, explanation: "The Constitution establishes the structure of government, outlines its powers, and guarantees fundamental civil liberties." },
-      { q: "The idea of self-government is in the first three words of the Constitution. What are these words?", options: ["We the People", "Freedom and Liberty", "United We Stand", "In God We Trust"], answer: 0, explanation: "'We the People' signifies that government authority is derived from the citizens of the United States." },
-      { q: "What is an amendment?", options: ["A preamble", "A change or addition to the Constitution", "A supreme court ruling", "A presidential veto"], answer: 1, explanation: "Amendments allow the US Constitution to adapt and evolve over time through formal additions." },
-      { q: "What do we call the first ten amendments to the Constitution?", options: ["The Declaration of Independence", "The Articles of Confederation", "The Bill of Rights", "The Federalist Papers"], answer: 2, explanation: "The Bill of Rights comprises the first 10 amendments protecting individual freedoms like speech and religion." },
-      { q: "What is one right or freedom from the First Amendment?", options: ["Trial by jury", "Speech", "Right to vote", "Bear arms"], answer: 1, explanation: "The First Amendment protects freedom of speech, religion, press, assembly, and petition." },
-      { q: "How many amendments does the Constitution have?", options: ["10", "27", "50", "100"], answer: 1, explanation: "The US Constitution has been amended 27 times throughout American history." },
-      { q: "What did the Declaration of Independence do?", options: ["Declared independence from Great Britain", "Started the Civil War", "Freed the slaves", "Established the US Army"], answer: 0, explanation: "The Declaration announced that the thirteen American colonies were independent states free from British rule." },
-      { q: "What are two rights in the Declaration of Independence?", options: ["Life and liberty", "Voting and driving", "Paying taxes and jury duty", "Free healthcare and education"], answer: 0, explanation: "The Declaration states unalienable rights: Life, Liberty, and the pursuit of Happiness." },
-      { q: "What is the economic system in the United States?", options: ["Communist economy", "Capitalist or market economy", "Socialist economy", "Feudal economy"], answer: 1, explanation: "The US operates on a capitalist or market economy driven by private enterprise and consumer choice." },
-      { q: "What is the 'rule of law'?", options: ["Everyone must obey the law", "Only citizens must obey laws", "The President makes all laws", "Laws can be ignored during emergencies"], answer: 0, explanation: "The rule of law dictates that leaders, citizens, and institutions are all equally subject to the law." },
-      { q: "Name one branch or part of the government.", options: ["Legislative", "Congress", "Executive", "All of the above"], answer: 3, explanation: "The US government is divided into three branches: Legislative, Executive, and Judicial." },
-      { q: "Who is in charge of the executive branch?", options: ["The Speaker of the House", "The Chief Justice", "The President", "The Vice President"], answer: 2, explanation: "The President heads the executive branch and enforces federal laws." },
-      { q: "Who makes federal laws?", options: ["Congress", "The President", "The Supreme Court", "State Governors"], answer: 0, explanation: "Congress, consisting of the Senate and House of Representatives, is the legislative body that creates federal laws." }
+    'use strict';
+    const bank = [
+      {q:'What is the supreme law of the land?',options:['The Declaration of Independence','The Constitution','The Bill of Rights','The Articles of Confederation'],answer:1,explanation:'The U.S. Constitution is the supreme law of the land.'},
+      {q:'What does the Constitution do?',options:['Sets up the government','Defines the government','Protects basic rights','All of the above'],answer:3,explanation:'The Constitution establishes the government, defines its powers, and protects basic rights.'},
+      {q:'What are the first three words of the Constitution?',options:['We the People','Life and Liberty','United We Stand','In God We Trust'],answer:0,explanation:'“We the People” expresses popular sovereignty and self-government.'},
+      {q:'What is an amendment?',options:['A presidential order','A change or addition to the Constitution','A court trial','A federal agency'],answer:1,explanation:'An amendment is a formal change or addition to the Constitution.'},
+      {q:'What do we call the first ten amendments?',options:['The Federalist Papers','The Bill of Rights','The Declaration','The Articles'],answer:1,explanation:'The first ten amendments are known as the Bill of Rights.'},
+      {q:'Name one freedom from the First Amendment.',options:['Speech','Driving','Free housing','Guaranteed employment'],answer:0,explanation:'The First Amendment protects freedoms including speech, religion, press, assembly, and petition.'},
+      {q:'How many amendments does the Constitution have?',options:['10','17','27','50'],answer:2,explanation:'The U.S. Constitution has 27 amendments.'},
+      {q:'What did the Declaration of Independence do?',options:['Declared independence from Great Britain','Created the Supreme Court','Ended the Civil War','Established the Constitution'],answer:0,explanation:'It announced that the thirteen colonies considered themselves independent from Great Britain.'},
+      {q:'What is the economic system in the United States?',options:['Feudalism','Capitalism or market economy','Command economy','Barter only'],answer:1,explanation:'USCIS accepts capitalism or free-market economy.'},
+      {q:'What is the rule of law?',options:['Only citizens obey laws','Everyone must follow the law','The President is above the law','Courts write every law'],answer:1,explanation:'The rule of law means everyone, including leaders and government, must obey the law.'},
+      {q:'Name one branch of the U.S. government.',options:['Legislative','Executive','Judicial','Any of these'],answer:3,explanation:'The three branches are legislative, executive, and judicial.'},
+      {q:'Who is in charge of the executive branch?',options:['The President','The Chief Justice','The Speaker','The Senate'],answer:0,explanation:'The President leads the executive branch.'},
+      {q:'What part of the federal government writes laws?',options:['The President','Congress','The Supreme Court','State governors'],answer:1,explanation:'Congress is the federal legislative body.'},
+      {q:'What are the two parts of the U.S. Congress?',options:['President and Cabinet','Senate and House of Representatives','Courts and agencies','States and territories'],answer:1,explanation:'Congress consists of the Senate and House of Representatives.'}
     ];
-
-    let testQuestions = [];
-    let currentIdx = 0;
-    let score = 0;
-
-    function startExam() {
-      testQuestions = [...officialCivicsQuestions].sort(() => 0.5 - Math.random()).slice(0, 10);
-      currentIdx = 0;
-      score = 0;
-      document.getElementById('startScreen').classList.add('hidden');
-      document.getElementById('resBox').classList.add('hidden');
-      document.getElementById('quizBox').classList.remove('hidden');
-      loadQuestion();
+    let run = [], idx = 0, points = 0, locked = false;
+    function startPractice() {
+      run = [...bank].sort(() => Math.random() - 0.5).slice(0, 10);
+      idx = 0; points = 0; locked = false;
+      document.getElementById('start').classList.add('hidden');
+      document.getElementById('result').classList.add('hidden');
+      document.getElementById('quiz').classList.remove('hidden');
+      showQuestion();
     }
-
-    function loadQuestion() {
-      if (currentIdx >= testQuestions.length) {
-        finishExam();
-        return;
-      }
-      let q = testQuestions[currentIdx];
-      document.getElementById('qCount').innerText = `Question ${currentIdx + 1} of 10`;
-      document.getElementById('qText').innerText = q.q;
-      document.getElementById('explanationBox').classList.add('hidden');
-      document.getElementById('quizBox').classList.remove('hidden');
-
-      let box = document.getElementById('optsBox');
-      box.innerHTML = '';
-      q.options.forEach((opt, i) => {
-        let btn = document.createElement('button');
-        btn.className = "w-full text-left p-4 rounded-2xl bg-white dark:bg-slate-900 border border-emerald-100 dark:border-slate-700 hover:bg-emerald-50 dark:hover:bg-slate-800 hover:border-emerald-300 font-medium text-sm transition shadow-sm";
-        btn.innerText = opt;
-        btn.onclick = () => checkAnswer(i, q.answer, q.explanation);
-        box.appendChild(btn);
+    function showQuestion() {
+      locked = false;
+      const q = run[idx];
+      document.getElementById('progress').textContent = `Question ${idx + 1} of ${run.length}`;
+      document.getElementById('score').textContent = `Correct: ${points}`;
+      document.getElementById('bar').style.width = `${(idx / run.length) * 100}%`;
+      document.getElementById('question').textContent = q.q;
+      document.getElementById('feedback').classList.add('hidden');
+      const answers = document.getElementById('answers');
+      answers.replaceChildren();
+      q.options.forEach((option, i) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'text-left border border-emerald-200 bg-white rounded-xl p-4 hover:bg-emerald-50';
+        button.textContent = option;
+        button.addEventListener('click', () => answer(i));
+        answers.appendChild(button);
       });
     }
-
-    function checkAnswer(selected, correct, explanation) {
-      if (selected === correct) score++;
-      let buttons = document.getElementById('optsBox').getElementsByTagName('button');
-      for(let i=0; i<buttons.length; i++) {
-        buttons[i].disabled = true;
-        if(i === correct) buttons[i].classList.add('bg-emerald-100', 'dark:bg-emerald-950', 'border-emerald-400');
-        else if(i === selected) buttons[i].classList.add('bg-rose-100', 'dark:bg-rose-950', 'border-rose-400');
-      }
-      document.getElementById('explanationText').innerText = explanation;
-      document.getElementById('explanationBox').classList.remove('hidden');
+    function answer(selected) {
+      if (locked) return;
+      locked = true;
+      const q = run[idx];
+      if (selected === q.answer) points += 1;
+      [...document.getElementById('answers').children].forEach((button, i) => {
+        button.disabled = true;
+        if (i === q.answer) button.classList.add('bg-emerald-100','border-emerald-500');
+        else if (i === selected) button.classList.add('bg-rose-100','border-rose-400');
+      });
+      document.getElementById('score').textContent = `Correct: ${points}`;
+      document.getElementById('explain').textContent = q.explanation;
+      document.getElementById('feedback').classList.remove('hidden');
     }
-
     function nextQuestion() {
-      currentIdx++;
-      loadQuestion();
-    }
-
-    function finishExam() {
-      document.getElementById('quizBox').classList.add('hidden');
-      document.getElementById('explanationBox').classList.add('hidden');
-      document.getElementById('resBox').classList.remove('hidden');
-
-      let passed = score >= 6;
-      document.getElementById('resultEmoji').innerText = passed ? '🇺🇸🎉' : '📚⚠️';
-      document.getElementById('resultTitle').innerText = passed ? 'Congratulations, You Passed!' : 'Practice Recommended';
-      document.getElementById('scoreText').innerText = `You scored ${score} out of 10 (${score * 10}%). ${passed ? 'You successfully met the official USCIS passing threshold of 60%!' : 'You need at least 6 correct answers to pass the official USCIS civics test.'}`;
-    }
-
-    function speakQuestion() {
-      if ('speechSynthesis' in window) {
-        let qText = document.getElementById('qText').innerText;
-        if(!qText) qText = "Welcome to OmniCitizen US Civics Practice Exam.";
-        let utterance = new SpeechSynthesisUtterance(qText);
-        utterance.rate = 0.9;
-        window.speechSynthesis.speak(utterance);
+      idx += 1;
+      if (idx >= run.length) {
+        document.getElementById('quiz').classList.add('hidden');
+        document.getElementById('result').classList.remove('hidden');
+        document.getElementById('resultText').textContent = `You answered ${points} of 10 questions correctly (${points * 10}%). Review the explanations and consult the official question bank for your test version.`;
+        document.getElementById('bar').style.width = '100%';
       } else {
-        alert('Speech synthesis is not supported in this browser.');
+        showQuestion();
       }
     }
   </script>
